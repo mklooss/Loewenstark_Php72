@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Loewenstark_Crypt>
+            <version>0.0.0.1</version>
+        </Loewenstark_Crypt>
+    </modules>
+    <global>
+        <models>
+            <customer>
+                <rewrite>
+                    <customer_attribute_source_group>Loewenstark_Php72_Model_Customer_Customer_Attribute_Source_Group</customer_attribute_source_group>
+                    <customer_attribute_source_website>Loewenstark_Php72_Model_Customer_Customer_Attribute_Source_Website</customer_attribute_source_website>
+                    <entity_address_attribute_source_country>Loewenstark_Php72_Model_Customer_Entity_Address_Attribute_Source_Country</entity_address_attribute_source_country>
+                </rewrite>
+            </customer>
+            <customer_resource>
+                <rewrite>
+                    <address_attribute_source_country>Loewenstark_Php72_Model_Resource_Customer_Address_Attribute_Source_Country</address_attribute_source_country>
+                </rewrite>
+            </customer_resource>
+        </models>
+    </global>
+</config>

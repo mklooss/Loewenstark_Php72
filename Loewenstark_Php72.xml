@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Loewenstark_Php72>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Core />
+                <Mage_Customer />
+            </depends>
+        </Loewenstark_Php72>
+    </modules>
+</config>

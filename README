@@ -1,0 +1,3 @@
+Some Rewrites which fixed errors on currently only customer view in backend
+
+PHP Fatal error:  Declaration of Mage_Customer_Model_Resource_Address_Attribute_Source_Country::getAllOptions() must be compatible with Mage_Eav_Model_Entity_Attribute_Source_Table::getAllOptions($withEmpty = true, $defaultValues = false) in magento/app/code/core/Mage/Customer/Model/Resource/Address/Attribute/Source/Country.php on line 0
