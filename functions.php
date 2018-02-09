@@ -53,6 +53,18 @@ if (get_magic_quotes_gpc()) {
 
 if (version_compare(PHP_VERSION, '7.2.0', '<'))
 {
+    function mageAutoLoader($class)
+    {
+        if (defined('COMPILER_INCLUDE_PATH')) {
+            $classFile = $class.'.php';
+        } else {
+            $classFile = uc_words($class, DIRECTORY_SEPARATOR).'.php';
+        }
+
+        include($classFile);
+    }
+    spl_autoload_register('mageAutoLoader');
+} else {
     /**
      * Class autoload
      *
@@ -70,18 +82,6 @@ if (version_compare(PHP_VERSION, '7.2.0', '<'))
 
         include($classFile);
     }
-} else {
-    function mageAutoLoader($class)
-    {
-        if (defined('COMPILER_INCLUDE_PATH')) {
-            $classFile = $class.'.php';
-        } else {
-            $classFile = uc_words($class, DIRECTORY_SEPARATOR).'.php';
-        }
-
-        include($classFile);
-    }
-    spl_autoload_register('mageAutoLoader');
 }
 
 /**
