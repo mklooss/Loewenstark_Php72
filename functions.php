@@ -51,38 +51,24 @@ if (get_magic_quotes_gpc()) {
     $_REQUEST = mageUndoMagicQuotes($_REQUEST);
 }
 
-if (version_compare(PHP_VERSION, '7.2.0', '<'))
+/**
+ * Class autoload
+ *
+ * @todo change to spl_autoload_register
+ * @deprecated
+ * @param string $class
+ */
+function mageAutoLoader($class)
 {
-    function mageAutoLoader($class)
-    {
-        if (defined('COMPILER_INCLUDE_PATH')) {
-            $classFile = $class.'.php';
-        } else {
-            $classFile = uc_words($class, DIRECTORY_SEPARATOR).'.php';
-        }
-
-        include($classFile);
+    if (defined('COMPILER_INCLUDE_PATH')) {
+        $classFile = $class.'.php';
+    } else {
+        $classFile = uc_words($class, DIRECTORY_SEPARATOR).'.php';
     }
-    spl_autoload_register('mageAutoLoader');
-} else {
-    /**
-     * Class autoload
-     *
-     * @todo change to spl_autoload_register
-     * @deprecated
-     * @param string $class
-     */
-    function __autoload($class)
-    {
-        if (defined('COMPILER_INCLUDE_PATH')) {
-            $classFile = $class.'.php';
-        } else {
-            $classFile = uc_words($class, DIRECTORY_SEPARATOR).'.php';
-        }
 
-        include($classFile);
-    }
+    include($classFile);
 }
+spl_autoload_register('mageAutoLoader');
 
 /**
  * Object destructor
