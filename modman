@@ -1,3 +1,3 @@
 code                        app/code/community/Loewenstark/Php72
 Loewenstark_Php72.xml       app/etc/modules/Loewenstark_Php72.xml
-
+functions.php               app/code/community/Mage/Core/functions.php
