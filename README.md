@@ -16,6 +16,10 @@ Requirements
 - PHP >= 5.6.0
 - Magento < 1.9.4.0
 
+Optional
+--------
+ - [extension on GitHub](https://github.com/mklooss/Magento_phpseclib)
+
 Compatibility
 -------------
 - Magento >= 1.7
