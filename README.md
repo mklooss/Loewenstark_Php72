@@ -18,7 +18,7 @@ Requirements
 
 Optional
 --------
- - [extension on GitHub](https://github.com/mklooss/Magento_phpseclib)
+ - [Magento_phpseclib](https://github.com/mklooss/Magento_phpseclib) - also include mcrypt_compact
 
 Compatibility
 -------------
