@@ -25,13 +25,13 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-$originPhpseclibBootstrapPath = 'lib/phpseclib/bootstrap.php';
-$phpseclibBootstrapPath = 'app/code/local/phpseclib/bootstrap.php';
+$originPhpseclibBootstrapPath = BP.'/lib/phpseclib/bootstrap.php';
+$phpseclibBootstrapPath = BP.'/app/code/local/phpseclib/bootstrap.php';
 if (!file_exists($originPhpseclibBootstrapPath)
         && file_exists($phpseclibBootstrapPath))
 {
     include_once 'phpseclib/bootstrap.php';
-    $phpseclibmcrypt_compact = 'app/code/community/mcryptcompat/mcrypt.php';
+    $phpseclibmcrypt_compact = BP.'/app/code/community/mcryptcompat/mcrypt.php';
     if (file_exists($phpseclibmcrypt_compact))
     {
         include_once 'mcryptcompat/mcrypt.php';
